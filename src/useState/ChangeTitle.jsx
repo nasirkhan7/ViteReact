@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-
+let title = 'Hello World'
 const ChangeTitle = () => {
-const handleClick = () => {
-  // console.log('hello');
-  
-}
+  // Using state to manage The Title
+  const[title,setTitle] = useState('Hello World')
 
-return (<>
-  <div className="container">
-    <h1 className='display-1'> Hello World </h1> 
-    <button onClick={ handleClick } className="btn btn-warning"> Change
-      Title </button>
+      const handleClick = () => {
+        // Updating the title using the setTitle function
+        setTitle('New World')
+    }
+
+        return ( 
+        <>
+          <div className="container">
+              <h1 className='display-1'>
+                {title}</h1> 
+              <button onClick={ handleClick } className="btn btn-warning"> Change
+                       Title </button>
   </div>
-</>)
+</>
+)
 }
 
 export default ChangeTitle
